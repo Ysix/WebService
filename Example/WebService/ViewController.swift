@@ -56,9 +56,10 @@ class ViewController: UIViewController, NetworkingErrorHandler {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-//        WebService.debug = true
+        WebService.shared.defaultHeaders = ["Example Header": "This header will be in all requests if it's nor overwritten"]
+        WebService.shared.debug = true
 
-        WebService.load(Person.gender(for: "Rick")) { (result) in
+        WebService.shared.load(Person.gender(for: "Rick")) { (result) in
             switch result {
             case .error(let error):
                 self.handleNetworkingError(error: error)
@@ -85,7 +86,7 @@ class ViewController: UIViewController, NetworkingErrorHandler {
             return NetworkingError.NetworkingErrorInfo(localizedDescription: nil, localizedFailureReason: errorJSON["error"] as? String)
         }
 
-        WebService.load(badRequest) { (result) in
+        WebService.shared.load(badRequest) { (result) in
             switch result {
             case .error(let error):
                 self.handleNetworkingError(error: error)

@@ -7,6 +7,9 @@
 
 import Foundation
 
+//TODO: rename this to WebService
+
+//TODO: give this protocol a viewController var to display the default alerts
 public protocol NetworkingErrorHandler {
     func handleNetworkingError(error: NetworkingError, completion: (() -> ())?)
     func handleUnauthorizedNetworkingError(completion: (() -> ())?) // this is very specific (interact with session data (app logic) or specific on login for exemple) -> handler has to handle it (but you can make an other protocol to handle the "disconnect" keeping this part in your app logic)
@@ -15,7 +18,7 @@ public protocol NetworkingErrorHandler {
 public extension NetworkingErrorHandler where Self: UIViewController { // convenient handler not based on your app logic but on UX best practics
     
     func handleNetworkingError(error: NetworkingError, completion: (() -> ())? = nil) {
-        print("error : \(error.localizedFailureReason)")
+        print("Networking error : \(error.localizedFailureReason)")
         switch error {
         case .notConnectedToInternet:
             // do nothing (an error message should be displayed in the UI to tell the user the problem).

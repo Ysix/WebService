@@ -30,14 +30,16 @@ public enum RequestResult<resultType, errorType> {
 
 public final class WebService {
 
-    public static var debug = false
-    public static var defaultHeaders: [String:String]? = nil
+    public static let shared: WebService = WebService()
 
-    public static func load<A>(_ resource: WebResource<A>, completion: @escaping (RequestResult<A, NetworkingError>) -> ()) {
+    public var debug = false
+    public var defaultHeaders: [String:String]? = nil
+
+    public func load<A>(_ resource: WebResource<A>, completion: @escaping (RequestResult<A, NetworkingError>) -> ()) {
 
         var headers: [String: String]? = nil
 
-        if let defaultHeaders = WebService.defaultHeaders {
+        if let defaultHeaders = self.defaultHeaders, self.defaultHeaders!.count > 0 {
             headers = defaultHeaders
             if let resourceHeaders = resource.headers {
                 for (key,value) in resourceHeaders {
@@ -50,7 +52,7 @@ public final class WebService {
 
         Alamofire.request(resource.url, method: resource.method, parameters: resource.parameters, encoding: resource.method == .get ? URLEncoding.queryString : JSONEncoding.default, headers: headers).validate().responseJSON { (response) -> Void in
 
-            if debug {
+            if self.debug {
                 let requestId: String = (response.response?.allHeaderFields["X-Request-Id"]) as? String ?? "No Request Id"
                 print("[\(requestId)] request \(resource.method) \(resource.url)")
                 print("[\(requestId)] headers : \(String(describing: response.request?.allHTTPHeaderFields))")
@@ -96,7 +98,7 @@ public final class WebService {
                 }
             case .success(let json):
                 do {
-                    if debug {
+                    if self.debug {
                         print("json : \(json))")
                     }
                     let result = try resource.parseJSON(json as AnyObject)

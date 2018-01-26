@@ -28,9 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1980488DC1C74AA43D98EA82 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1980488DC1C74AA43D98EA82 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		293A8CBA2C8767707B7745CE /* Pods-WebService_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebService_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebService_Tests/Pods-WebService_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		52E7A06616A26F8E81B29B48 /* WebService.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = WebService.podspec; path = ../WebService.podspec; sourceTree = "<group>"; };
+		52E7A06616A26F8E81B29B48 /* WebService.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WebService.podspec; path = ../WebService.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WebService_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebService_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7AAAFC5292DA6753E47B5012 /* Pods-WebService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebService_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebService_Example/Pods-WebService_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7CFA9A223BB4FC4562B25F07 /* Pods-WebService_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebService_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebService_Tests/Pods-WebService_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A3512B57B356108E80C6233A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A3512B57B356108E80C6233A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A3A068A1EB7FD9853543E0FD /* Pods_WebService_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebService_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED84B7CA86BA2CBC881DD734 /* Pods-WebService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebService_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebService_Example/Pods-WebService_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F395822A7399E2797FE452F3 /* Pods_WebService_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebService_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = AS86H4HDC9;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 89NNM5VR3C;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -519,6 +521,7 @@
 			baseConfigurationReference = ED84B7CA86BA2CBC881DD734 /* Pods-WebService_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AS86H4HDC9;
 				INFOPLIST_FILE = WebService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -534,6 +537,7 @@
 			baseConfigurationReference = 7AAAFC5292DA6753E47B5012 /* Pods-WebService_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AS86H4HDC9;
 				INFOPLIST_FILE = WebService/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -548,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7CFA9A223BB4FC4562B25F07 /* Pods-WebService_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 89NNM5VR3C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -569,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 293A8CBA2C8767707B7745CE /* Pods-WebService_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 89NNM5VR3C;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
