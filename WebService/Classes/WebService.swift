@@ -28,7 +28,7 @@ public enum RequestResult<resultType, errorType> {
 //    }
 //}
 
-public final class WebService {
+public class WebService {
 
     public static let shared: WebService = WebService()
 
