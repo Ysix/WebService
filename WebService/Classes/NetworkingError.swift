@@ -72,7 +72,7 @@ public enum NetworkingError: Error { //TODO: do a protocol for this, and an enum
         }
     }
     
-    var localizedDescription: String { // for user display
+    public var localizedDescription: String { // for user display
         
         let defaultDescription = NSLocalizedString("An error occured", tableName: "NetworkingError", bundle: NetworkingError.bundle, comment: "")
         
@@ -93,7 +93,7 @@ public enum NetworkingError: Error { //TODO: do a protocol for this, and an enum
         }
     }
     
-    var localizedFailureReason: String { // for developer
+    public var localizedFailureReason: String { // for developer
         switch self {
         case .unknown(let info):
             return info ??  NSLocalizedString("Unknown error", tableName: "NetworkingError", bundle: NetworkingError.bundle, comment: "")
