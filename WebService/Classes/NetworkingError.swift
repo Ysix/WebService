@@ -41,9 +41,10 @@ public extension NetworkingErrorHandler where Self: UIViewController { // conven
 public enum NetworkingError: Error { //TODO: do a protocol for this, and an enum to handle default cases. (let app add more error types that can be thrown by the parseJSON method)
     
     public typealias NetworkingErrorInfo = (localizedDescription: String?, localizedFailureReason: String?)
-    
-    static let bundle = Bundle.main
-    static let domain = bundle.bundleIdentifier! + ".Networking.Error"
+
+    static let bundlePath = Bundle(for: WebService.self).path(forResource: "WebService", ofType: "bundle")!
+    static let bundle = Bundle(path: NetworkingError.bundlePath)!
+    static let domain = Bundle.main.bundleIdentifier! + ".Networking.Error"
     
     case unknown(localizedFailureReason: String?)
     case notConnectedToInternet
@@ -54,6 +55,7 @@ public enum NetworkingError: Error { //TODO: do a protocol for this, and an enum
     case dataCantBeParsed
     
     var code: Int {
+
         switch self {
         case .unknown:
             return 0

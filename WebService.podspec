@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WebService'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'A short description of WebService.'
 
 # This description is used to generate tags and improve search results.
@@ -32,9 +32,10 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'WebService/Classes/**/*'
   
-  # s.resource_bundles = {
+   s.resource_bundles = {
   #   'WebService' => ['WebService/Assets/*.png']
-  # }
+    'WebService' => ["WebService/Assets/*.lproj/*.strings"]
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

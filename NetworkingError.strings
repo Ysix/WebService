@@ -1,0 +1,16 @@
+/* 
+  NetworkingError.strings
+  BrigadesAffinity
+
+  Created by Eddy Claessens on 04/07/16.
+  Copyright © 2016 OMTS. All rights reserved.
+*/
+
+"Oops" = "Oops";
+"An error occured" = "An error occured";
+"You are not connected to Internet" = "You are not connected to Internet";
+
+"Unknown error" = "Unknown error";
+"Not connected to Internet" = "Not connected to Internet";
+"Server error" = "Server error";
+"Invalid request" = "Invalid request";

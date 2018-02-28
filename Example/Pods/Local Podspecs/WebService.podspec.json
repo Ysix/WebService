@@ -1,6 +1,6 @@
 {
   "name": "WebService",
-  "version": "0.1.0",
+  "version": "0.2.3",
   "summary": "A short description of WebService.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Ysix/WebService",
@@ -13,12 +13,17 @@
   },
   "source": {
     "git": "https://github.com/Ysix/WebService.git",
-    "tag": "0.1.0"
+    "tag": "0.2.3"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "WebService/Classes/**/*",
+  "resource_bundles": {
+    "WebService": [
+      "WebService/Assets/*.lproj/*.strings"
+    ]
+  },
   "dependencies": {
     "Alamofire": [
 
