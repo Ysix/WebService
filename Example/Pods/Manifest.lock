@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.6.0)
+  - Alamofire (4.7.2)
   - WebService (0.2.3):
     - Alamofire
 
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   WebService: a4b2c6200039a9754c63d8631551c6aebc3e6d98
 
 PODFILE CHECKSUM: cdf09ebd2722cd56d7e62b9f78f4e85d1d159a3c
